@@ -3,7 +3,7 @@
 и возвращает значение этого элемента или же указание, что такого элемента нет
 (row ,colum - входные данные). */
 
-// Метод генерации массива.
+// Метод генерации массива (с элементами в промежутке [-99; 99]).
 int[,] CreateArray(int row, int col)
 {
     int[,] array = new int[row, col];
@@ -44,7 +44,7 @@ int[] GetArrayFromString(string stringArray)
 
 Console.Write("Укажите номер строки и номер столбца массива для вывода числа (через пробел): ");
 int[] findIndex = GetArrayFromString(Console.ReadLine());
-int[,] randomArray = CreateArray(row: new Random().Next(15), col: new Random().Next(15));
+int[,] randomArray = CreateArray(row: new Random().Next(2, 15), col: new Random().Next(2, 15)); // Массив случайного размера [2; 14].
 Console.WriteLine("В массиве ");
 PrintArray(randomArray);
 if (findIndex[0] >= 0 && findIndex[0] < randomArray.GetLength(0) 
