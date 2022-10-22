@@ -44,7 +44,7 @@ int[] GetArrayFromString(string stringArray)
 
 Console.Write("Укажите номер строки и номер столбца массива для вывода числа (через пробел): ");
 int[] findIndex = GetArrayFromString(Console.ReadLine());
-int[,] randomArray = CreateArray(row: new Random().Next(2, 15), col: new Random().Next(2, 15)); // Массив случайного размера [2; 14].
+int[,] randomArray = CreateArray(row: new Random().Next(2, 16), col: new Random().Next(2, 16)); // Массив случайного размера [2; 15].
 Console.WriteLine("В массиве ");
 PrintArray(randomArray);
 if (findIndex[0] >= 0 && findIndex[0] < randomArray.GetLength(0) 
